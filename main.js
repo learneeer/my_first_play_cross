@@ -10,270 +10,84 @@ var empty9 = document.getElementsByClassName("empty")[8];
 
 var mark = "x";
 
+var change = function(x) {
+    if (x.innerHTML === "") {
+        if (mark === "x") { mark = "o" } else { mark = "x" }
+        x.innerHTML = mark;
+    }
+}
+
+var check = function(x, y, z) {
+    if (x.innerHTML === y.innerHTML && x.innerHTML === z.innerHTML) {
+        x.style.background = "green";
+        y.style.background = "green";
+        z.style.background = "green";
+        setTimeout((function() {
+            window.location.reload();
+        }), 2000);
+    }
+}
+
 
 
 var change1 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty1.innerHTML === empty3.innerHTML && empty1.innerHTML === empty3.innerHTML) {
-        empty1.style.background = "green";
-        empty2.style.background = "green";
-        empty3.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty1.innerHTML === empty4.innerHTML && empty1.innerHTML === empty7.innerHTML) {
-        empty1.style.background = "green";
-        empty4.style.background = "green";
-        empty7.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty1.innerHTML === empty5.innerHTML && empty1.innerHTML === empty9.innerHTML) {
-        empty1.style.background = "green";
-        empty5.style.background = "green";
-        empty9.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty1, empty2, empty3);
+    check(empty1, empty4, empty7);
+    check(empty1, empty5, empty9);
 }
 
 var change2 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty2.innerHTML === empty1.innerHTML && empty2.innerHTML === empty3.innerHTML) {
-        empty2.style.background = "green";
-        empty1.style.background = "green";
-        empty3.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty2.innerHTML === empty5.innerHTML && empty2.innerHTML === empty8.innerHTML) {
-        empty2.style.background = "green";
-        empty5.style.background = "green";
-        empty8.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty1, empty2, empty3);
+    check(empty2, empty5, empty8);
 }
 
 var change3 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty3.innerHTML === empty1.innerHTML && empty3.innerHTML === empty2.innerHTML) {
-        empty3.style.background = "green";
-        empty1.style.background = "green";
-        empty2.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty3.innerHTML === empty6.innerHTML && empty3.innerHTML === empty9.innerHTML) {
-        empty3.style.background = "green";
-        empty6.style.background = "green";
-        empty9.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty3.innerHTML === empty5.innerHTML && empty3.innerHTML === empty7.innerHTML) {
-        empty3.style.background = "green";
-        empty5.style.background = "green";
-        empty7.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty1, empty2, empty3);
+    check(empty3, empty5, empty7);
+    check(empty3, empty6, empty9);
 }
 
 var change4 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty4.innerHTML === empty1.innerHTML && empty4.innerHTML === empty7.innerHTML) {
-        empty4.style.background = "green";
-        empty1.style.background = "green";
-        empty7.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty4.innerHTML === empty5.innerHTML && empty4.innerHTML === empty6.innerHTML) {
-        empty4.style.background = "green";
-        empty5.style.background = "green";
-        empty6.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty4, empty5, empty6);
+    check(empty1, empty4, empty7);
 }
 
 var change5 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty5.innerHTML === empty1.innerHTML && empty5.innerHTML === empty9.innerHTML) {
-        empty5.style.background = "green";
-        empty1.style.background = "green";
-        empty9.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty5.innerHTML === empty2.innerHTML && empty5.innerHTML === empty8.innerHTML) {
-        empty5.style.background = "green";
-        empty2.style.background = "green";
-        empty8.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty5.innerHTML === empty3.innerHTML && empty5.innerHTML === empty7.innerHTML) {
-        empty5.style.background = "green";
-        empty3.style.background = "green";
-        empty7.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty5.innerHTML === empty4.innerHTML && empty5.innerHTML === empty6.innerHTML) {
-        empty5.style.background = "green";
-        empty4.style.background = "green";
-        empty6.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty2, empty5, empty8);
+    check(empty4, empty5, empty6);
+    check(empty7, empty5, empty3);
+    check(empty1, empty5, empty9);
 }
 
 var change6 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty6.innerHTML === empty3.innerHTML && empty6.innerHTML === empty9.innerHTML) {
-        empty6.style.background = "green";
-        empty3.style.background = "green";
-        empty9.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty6.innerHTML === empty5.innerHTML && empty6.innerHTML === empty4.innerHTML) {
-        empty6.style.background = "green";
-        empty4.style.background = "green";
-        empty5.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty3, empty6, empty9);
+    check(empty4, empty5, empty6);
 }
 
 var change7 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty7.innerHTML === empty1.innerHTML && empty7.innerHTML === empty4.innerHTML) {
-        empty7.style.background = "green";
-        empty1.style.background = "green";
-        empty4.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty7.innerHTML === empty8.innerHTML && empty7.innerHTML === empty9.innerHTML) {
-        empty7.style.background = "green";
-        empty8.style.background = "green";
-        empty9.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty7.innerHTML === empty5.innerHTML && empty7.innerHTML === empty3.innerHTML) {
-        empty7.style.background = "green";
-        empty3.style.background = "green";
-        empty5.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty1, empty4, empty7);
+    check(empty7, empty8, empty9);
+    check(empty7, empty5, empty3);
 }
 
 var change8 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty8.innerHTML === empty2.innerHTML && empty8.innerHTML === empty5.innerHTML) {
-        empty8.style.background = "green";
-        empty2.style.background = "green";
-        empty5.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty8.innerHTML === empty7.innerHTML && empty8.innerHTML === empty9.innerHTML) {
-        empty8.style.background = "green";
-        empty7.style.background = "green";
-        empty9.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty7, empty8, empty9);
+    check(empty2, empty5, empty8);
 }
 
 var change9 = function() {
-    if (this.innerHTML === "") {
-        if (mark === "x") { mark = "o" } else { mark = "x" }
-        this.innerHTML = mark;
-    }
-
-    if (empty9.innerHTML === empty7.innerHTML && empty9.innerHTML === empty8.innerHTML) {
-        empty9.style.background = "green";
-        empty7.style.background = "green";
-        empty8.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty9.innerHTML === empty6.innerHTML && empty9.innerHTML === empty3.innerHTML) {
-        empty9.style.background = "green";
-        empty3.style.background = "green";
-        empty6.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
-    if (empty9.innerHTML === empty5.innerHTML && empty9.innerHTML === empty1.innerHTML) {
-        empty9.style.background = "green";
-        empty1.style.background = "green";
-        empty5.style.background = "green";
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
-    }
+    change(this);
+    check(empty3, empty6, empty9);
+    check(empty7, empty8, empty9);
+    check(empty1, empty5, empty9);
 }
 
 empty1.addEventListener("click", change1);
