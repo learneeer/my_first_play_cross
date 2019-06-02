@@ -48,9 +48,6 @@ var change2 = function() {
     if (this.innerHTML === "") {
         if (mark === "x") { mark = "o" } else { mark = "x" }
         this.innerHTML = mark;
-        setTimeout((function() {
-            window.location.reload();
-        }), 2000);
     }
 
     if (empty2.innerHTML === empty1.innerHTML && empty2.innerHTML === empty3.innerHTML) {
