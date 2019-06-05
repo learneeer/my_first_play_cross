@@ -28,7 +28,7 @@ var field = function(x, y) {
     var tab = [id1, id2, id3, id4, id5, id6, id7, id8, id9];
 
     for (i = 0; i < 9; i++) {
-        if (tab[i] > 0) { tab1.push(tab[i]); }
+        if (tab[i] > 0 && tab[i] < 10) { tab1.push(tab[i]); }
 
     }
 
@@ -36,22 +36,11 @@ var field = function(x, y) {
     console.log(tab1);
 
 
-
-    var f1 = document.getElementById("id" + id1).innerHTML;
-    var f2 = document.getElementById("id" + id2).innerHTML;
-    var f3 = document.getElementById("id" + id3).innerHTML;
-    var f4 = document.getElementById("id" + id4).innerHTML;
-    var f5 = document.getElementById("id" + id5).innerHTML;
-    var f6 = document.getElementById("id" + id6).innerHTML;
-    var f7 = document.getElementById("id" + id7).innerHTML;
-    var f8 = document.getElementById("id" + id8).innerHTML;
-    var f9 = document.getElementById("id" + id9).innerHTML;
-
-
-
     for (i = 0; i < tab1.length; i++) {
+        console.log(tab1[i]);
         var f = document.getElementById("id" + tab1[i]).innerHTML;
         console.log(f);
+
     }
 
 
