@@ -1,12 +1,10 @@
-var x;
-var y;
-
 var mark = "x";
 
 
-var change = function(row, col) {
-    var nr = 3 * col + row + 1;
+var check = function(row, col) {
+    var nr = 3 * row + col + 1;
     var p = document.getElementById("id" + nr);
+
     if (p.innerHTML === "") {
         if (mark === "x") { mark = "o" } else { mark = "x" }
         p.innerHTML = mark;
@@ -15,103 +13,80 @@ var change = function(row, col) {
 
 var tab = [
     [
-        [x, y],
-        [x + 1, y],
-        [x + 2, y]
+        [0, 0],
+        [0, 1],
+        [0, 2]
     ],
     [
-        [x - 1, y],
-        [x, y],
-        [x + 1, y]
+        [1, 0],
+        [1, 1],
+        [1, 2]
     ],
     [
-        [x - 2, y],
-        [x - 1, y],
-        [x, y]
+        [2, 0],
+        [2, 1],
+        [2, 2]
     ],
     [
-        [x, y],
-        [x, y + 1],
-        [x, y + 2]
+        [0, 0],
+        [1, 0],
+        [2, 0]
     ],
     [
-        [x, y - 1],
-        [x, y],
-        [x, y + 1]
+        [0, 1],
+        [1, 1],
+        [2, 1]
     ],
     [
-        [x, y - 2],
-        [x, y - 1],
-        [x, y]
+        [0, 2],
+        [1, 2],
+        [2, 2]
     ],
     [
-        [x, y],
-        [x + 1, y + 1],
-        [x + 2, y + 2]
+        [0, 0],
+        [1, 1],
+        [2, 2]
     ],
     [
-        [x - 1, y - 1],
-        [x, y],
-        [x + 1, y + 1]
-    ],
-    [
-        [x - 2, y - 2],
-        [x - 1, y - 1],
-        [x, y]
-    ],
-    [
-        [x, y],
-        [x + 1, y - 1],
-        [x + 2, y - 2]
-    ],
-    [
-        [x - 1, y - 1],
-        [x, y],
-        [x + 1, y - 1]
-    ],
-    [
-        [x - 2, y + 2],
-        [x - 1, y + 1],
-        [x, y]
+        [2, 0],
+        [1, 1],
+        [0, 2]
     ]
 ]
 
+var cos2 = function(c) {
+    var c0 = c[0];
+    var c1 = c[1];
+    var nr = 3 * c0 + c1 + 1;
 
-var id = function(w) {
-    var row = w[0];
-    var col = w[1];
-    var nr = 3 * col + row + 1;
-    var f;
 
-    if (nr > 0 && nr < 10) { f = document.getElementById("id" + nr).innerHTML } else { f = "brak" }
-    return f;
+    console.log(c0);
+    console.log(c1);
+    console.log(nr);
+    console.log(p);
+
 
 }
 
+var cos = function(w) {
+    var p0 = w[0];
+    var p1 = w[1];
+    var p2 = w[2];
+
+    console.log(p0);
+    console.log(p1);
+    console.log(p2);
+
+    cos2(p0);
+    cos2(p1);
+    cos2(p2);
 
 
-var spr = function(c) {
-    var p_0 = c[0];
-    var p_1 = c[1];
-    var p_2 = c[2];
 
-
-    p0 = id(p_0);
-    p1 = id(p_1);
-    p2 = id(p_2);
-
-    if (p0 == p1 && p0 == p2) {
-        p0.style.background = 'green';
-        p1.style.background = 'green';
-        p2.style.background = 'green';
-    }
 }
 
-
-var check = function(x, y) {
-    change(x, y);
-
-    for (i = 0; i < tab.length; i++) {
-        spr(tab[i]);
-    }
+for (i = 0; i < tab.length; i++) {
+    console.log(tab[i]);
 }
+
+cos(tab[0]);
